@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahadevu | Portfolio</title>
+
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav container">
+        <div class="logo">Rajasekhar Mahadevu</div>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="container hero-content reveal">
+        <h1>Full Stack Web Developer</h1>
+        <p class="muted">
+          I build clean, responsive, and accessible web applications with modern
+          technologies.
+        </p>
+        <a href="#projects" class="btn">View Work</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container reveal">
+        <h2>About Me</h2>
+        <p class="muted">
+          Passionate developer focused on frontend excellence, backend
+          fundamentals, and real-world problem solving.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container grid grid-3 reveal">
+        <div class="card">HTML5 & CSS3</div>
+        <div class="card">JavaScript (ES6+)</div>
+        <div class="card">Node.js & Express</div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container grid grid-3 reveal">
+        <div class="card">
+          <h3>Portfolio Website</h3>
+          <p class="muted">Modern responsive portfolio</p>
+        </div>
+        <div class="card">
+          <h3>Mood Journal</h3>
+          <p class="muted">Full-stack tracking app</p>
+        </div>
+        <div class="card">
+          <h3>E-Commerce UI</h3>
+          <p class="muted">Frontend shopping experience</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+  <div class="container reveal">
+    <h2>Contact</h2>
+
+    <div class="card contact-card">
+      <form id="contact-form" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+    <script src="./js/main.js" defer></script>
+  </body>
+</html>
