@@ -28,11 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ================= CONTACT FORM =================
 
 // Auto-switch API based on environment
-const API_URL =
-  window.location.hostname === "localhost" ||
-  window.location.hostname === "127.0.0.1"
-    ? "http://localhost:5000/api/contact"
-    : "https://portfolio-backend.onrender.com/api/contact";
+const API_URL = "https://portfoliov1-backend.onrender.com/";
 
 const contactForm = document.getElementById("contact-form");
 
