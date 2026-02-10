@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ================= CONTACT FORM =================
 
 // Auto-switch API based on environment
-const API_URL = "https://portfoliov1-backend.onrender.com/";
+const API_URL = "https://portfoliov1-backend.onrender.com/api/contact";
 
 const contactForm = document.getElementById("contact-form");
 
