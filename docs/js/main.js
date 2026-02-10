@@ -43,16 +43,16 @@ if (contactForm) {
     const formData = {
       name: contactForm.name.value.trim(),
       email: contactForm.email.value.trim(),
-      message: contactForm.message.value.trim()
+      message: contactForm.message.value.trim(),
     };
 
     try {
       const response = await fetch(API_URL, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
 
       const data = await response.json();
@@ -63,11 +63,9 @@ if (contactForm) {
 
       alert("✅ Message sent successfully!");
       contactForm.reset();
-
     } catch (error) {
       alert("❌ Failed to send message. Please try again.");
       console.error(error);
-
     } finally {
       button.disabled = false;
       button.textContent = "Send Message";
