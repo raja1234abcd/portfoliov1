@@ -18,5 +18,5 @@ A modern full-stack portfolio website with a responsive frontend and a real back
 
 ## Live Demo
 
-Frontend: https://your-site.netlify.app  
-Backend API: https://your-backend.onrender.com
+Frontend: https://lucky-sunburst-d5329d.netlify.app/  
+Backend API: https://portfoliov1-backend.onrender.com
