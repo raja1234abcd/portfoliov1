@@ -71,19 +71,36 @@
     </section>
 
     <section id="contact">
-  <div class="container reveal">
-    <h2>Contact</h2>
+      <div class="container reveal">
+        <h2>Contact</h2>
 
-    <div class="card contact-card">
-      <form id="contact-form" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button class="btn" type="submit">Send Message</button>
-      </form>
-    </div>
-  </div>
-</section>
+        <div class="card contact-card">
+          <form id="contact-form" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button class="btn" type="submit">
+              <span class="spinner"></span>
+              <span class="btn-text">Send Message</span>
+            </button>
+
+            <p id="form-status" class="muted">
+              <span class="status-icon"></span>
+              <span class="status-text"></span>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
 
     <script src="./js/main.js" defer></script>
   </body>
