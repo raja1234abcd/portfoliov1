@@ -1,3 +1,16 @@
+/* Smooth theme transition */
+body,
+.card,
+.navbar,
+.btn,
+input,
+textarea {
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -27,4 +40,48 @@ section {
 .container {
   max-width: 1100px;
   margin: auto;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Cinematic theme transition */
+.theme-transition * {
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease,
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
 }

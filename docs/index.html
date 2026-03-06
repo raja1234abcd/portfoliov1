@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mahadevu | Portfolio</title>
+    <title>Full Stack Developer | Portfolio</title>
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+    </script>
 
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/base.css" />
@@ -15,19 +21,37 @@
     <header>
       <nav class="nav container">
         <div class="logo">Rajasekhar Mahadevu</div>
-        <ul>
+
+        <!-- Hamburger Button -->
+        <button
+          id="menu-toggle"
+          class="menu-toggle"
+          aria-label="Toggle navigation menu"
+        >
+          ☰
+        </button>
+
+        <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle dark and light theme"
+        >
+          <span class="theme-icon">🌙</span>
+        </button>
       </nav>
     </header>
 
     <section class="hero">
       <div class="container hero-content reveal">
         <h1>Full Stack Web Developer</h1>
-        <p class="muted">
+        <p class="muted" role="status" aria-live="polite">
           I build clean, responsive, and accessible web applications with modern
           technologies.
         </p>
@@ -38,34 +62,91 @@
     <section id="about">
       <div class="container reveal">
         <h2>About Me</h2>
-        <p class="muted">
-          Passionate developer focused on frontend excellence, backend
-          fundamentals, and real-world problem solving.
+        <p class="muted" role="status" aria-live="polite">
+          I am a passionate full-stack developer with a strong focus on frontend
+          precision and backend reliability. I enjoy building responsive,
+          accessible user interfaces while ensuring clean architecture and
+          scalable server-side logic. My goal is to create practical, real-world
+          applications that solve meaningful problems through thoughtful design
+          and efficient implementation.
         </p>
       </div>
     </section>
 
     <section id="skills">
-      <div class="container grid grid-3 reveal">
-        <div class="card">HTML5 & CSS3</div>
-        <div class="card">JavaScript (ES6+)</div>
-        <div class="card">Node.js & Express</div>
+      <div class="container reveal">
+        <h2>Skills</h2>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <h4>HTML5 & CSS3</h4>
+            <p class="muted card-subtext">
+              Semantic, accessible layouts with responsive design principles.
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>JavaScript</h4>
+            <p class="muted card-subtext">
+              Interactive UI logic, DOM manipulation, and asynchronous API
+              handling.
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>Node.js & Express</h4>
+            <p class="muted card-subtext">
+              REST API development with middleware, routing, and environment
+              configuration.
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>PostgreSQL</h4>
+            <p class="muted card-subtext">
+              Structured data modeling and relational database integration.
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>Git & GitHub</h4>
+            <p class="muted card-subtext">
+              Version control, branching workflows, and production-ready
+              deployments.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="projects">
-      <div class="container grid grid-3 reveal">
-        <div class="card">
-          <h3>Portfolio Website</h3>
-          <p class="muted">Modern responsive portfolio</p>
-        </div>
-        <div class="card">
-          <h3>Mood Journal</h3>
-          <p class="muted">Full-stack tracking app</p>
-        </div>
-        <div class="card">
-          <h3>E-Commerce UI</h3>
-          <p class="muted">Frontend shopping experience</p>
+      <div class="container reveal">
+        <h2>Projects</h2>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Portfolio Website</h3>
+            <p class="muted card-subtext">
+              Modern full-stack portfolio with theme switching, animations, and
+              production deployment.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Mood Journal</h3>
+            <p class="muted card-subtext">
+              A visually driven journaling app that tracks emotional trends
+              through color analytics.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>E-Commerce UI</h3>
+            <p class="muted card-subtext">
+              Fully responsive product catalog with cart logic and secure
+              backend integration.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -75,7 +156,7 @@
         <h2>Contact</h2>
 
         <div class="card contact-card">
-          <form id="contact-form" class="contact-form">
+          <form id="contact-form" class="contact-form" aria-live="polite">
             <input type="text" name="name" placeholder="Your Name" required />
             <input
               type="email"
@@ -88,12 +169,12 @@
               placeholder="Your Message"
               required
             ></textarea>
-            <button class="btn" type="submit">
+            <button class="btn" type="submit" aria-label="Send contact message">
               <span class="spinner"></span>
               <span class="btn-text">Send Message</span>
             </button>
 
-            <p id="form-status" class="muted">
+            <p id="form-status" class="muted" role="status" aria-live="polite">
               <span class="status-icon"></span>
               <span class="status-text"></span>
             </p>
